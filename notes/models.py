@@ -8,5 +8,8 @@ class StockData(models.Model):
     close = models.DecimalField(max_digits=10, decimal_places=2)
     volume = models.BigIntegerField()
 
+    class Meta:
+        app_label = 'notes'
+
     def __str__(self):
         return f"{self.date} - Open: {self.open}, Close: {self.close}"
